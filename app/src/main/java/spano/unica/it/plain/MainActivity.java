@@ -184,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
                                 "Buongiorno Djanni!",
                                 "Bentornato in batcaverna");
 
+
                     }
                     @Override
                     public void onExitedRegion(BeaconRegion region) {
