@@ -6,8 +6,12 @@
           <option name="url" value="https://github.com/paperelle/iumanji" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/giovanniatzori/Plain.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
-    <option name="cloneParentDir" value="C:\Users\giovy\Desktop\UNIVERSITA\5_IUM\progetto\IUManji" />
+    <option name="cloneParentDir" value="C:\Users\giovy\Desktop\UNIVERSITA\7_tesi\MyApplication" />
   </component>
 </application>
