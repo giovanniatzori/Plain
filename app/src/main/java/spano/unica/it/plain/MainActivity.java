@@ -151,8 +151,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 System.out.println("button scan beacon");
                 beaconManager = new BeaconManager(getApplicationContext());
+                beaconManager.setRangingListener(new BeaconManager.BeaconRangingListener() {
+                    @Override public void onBeaconsDiscovered(BeaconRegion region, List<Beacon> list) {
+                        for (Beacon beacon : list) {
 
-                beaconManager.setMonitoringListener(new BeaconManager.BeaconMonitoringListener() {
+                            System.out.println(beacon.getProximityUUID()+ " " + beacon.getUniqueKey() + " " + beacon.getMajor() + " " + beacon.getMinor() + " " + beacon.getRssi());
+
+                        }
+                    }
+                });
+                /*beaconManager.setMonitoringListener(new BeaconManager.BeaconMonitoringListener() {
                     public void showNotification(String title, String message) {
                         System.out.println("mostrando la notifica");
                         Intent notifyIntent = new Intent(getApplicationContext(), MainActivity.class);
@@ -172,6 +180,8 @@ public class MainActivity extends AppCompatActivity {
                                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                         notificationManager.notify(1, notification);
                     }
+
+
                     @Override
                     public void onEnteredRegion(BeaconRegion region, List<Beacon> list) {
                         System.out.println("entrato nella regione");
@@ -192,18 +202,31 @@ public class MainActivity extends AppCompatActivity {
                                 "Arrivederci Djanni!",
                                 "Torna presto a trovarci");
                     }
-                });
+                });*/
 
                 beaconManager.connect(new BeaconManager.ServiceReadyCallback() {
+                    @Override
+                    public void onServiceReady() {
+                        beaconManager.startRanging(new BeaconRegion(
+                                "StanzaDueBatcave",
+                                UUID.fromString("B9407F30-F5F8-466E-AFF9-25556B57FE6D"),
+                                null, null));
+                        System.out.println("cercandone beacon");
+                    }
+                });
+
+                /*beaconManager.connect(new BeaconManager.ServiceReadyCallback() {
                     @Override
                     public void onServiceReady() {
                         beaconManager.startMonitoring(new BeaconRegion(
                                 "StanzaDueBatcave",
                                 UUID.fromString("B9407F30-F5F8-466E-AFF9-25556B57FE6D"),
                                 null, null));
-                        System.out.println("cercando beacon");
+                        System.out.println("cercandone beacon");
                     }
-                });
+                });*/
+
+                //beaconManager.setForegroundScanPeriod(SCANTIME, WAITTIME);
 
             }
 
