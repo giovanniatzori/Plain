@@ -34,7 +34,7 @@
     android:layout_height="80dp"
     android:text="Scan for Nearables"
 
-    android:background="@color/colorPrimary"
+    android:background="@color/colorButton"
     android:id="@+id/scanNearable"
 
     android:textSize="24sp"
@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="Scan for beacons"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorButton"
         android:id="@+id/scanBeacon"
 
         android:textSize="24sp"
