@@ -1,4 +1,4 @@
-package spano.unica.it.plain;
+package spano.unica.it.plain.School;
 
 /**
  * Created by giovy on 25/07/2017.
@@ -7,10 +7,10 @@ package spano.unica.it.plain;
 public class Room {
 
 
-    private double latoZero =1.0;
-    private double latoUno=1.0;
+    private double latoZero;
+    private double latoUno;
 
-    private double area = latoUno*latoZero;
+    private double area = 0.0;
 
     public double getLatoZero() {
         return latoZero;
@@ -29,7 +29,7 @@ public class Room {
     }
 
     public double getArea() {
-        return area;
+        return this.latoUno*this.latoZero;
     }
 
 }

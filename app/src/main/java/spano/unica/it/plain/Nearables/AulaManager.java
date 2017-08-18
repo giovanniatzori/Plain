@@ -17,7 +17,6 @@ import java.util.Map;
 
 public class AulaManager {
     private Listener listener;
-
     private BeaconManager beaconManager;
     private String scanId;
 
@@ -29,7 +28,9 @@ public class AulaManager {
             @Override
             public void onNearablesDiscovered(List<Nearable> list) {
                 for (Nearable nearable : list) {
+
                     NearableID nearableID = new NearableID(nearable.identifier);
+
                     System.out.println(nearable.identifier + " " + nearable.color + " " + nearable.rssi);
                     //System.out.println(nearable.color.toString() + " " + nearable.identifier + " " +  nearable.isMoving);
                     if (!banchi.keySet().contains(nearableID)) { continue; }
@@ -69,7 +70,7 @@ public class AulaManager {
     }
 
     public void stopUpdates() {
-        beaconManager.stopNearableDiscovery();
+
     }
 
     public void destroy() {

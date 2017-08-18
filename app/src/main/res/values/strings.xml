@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">Plain</string>
+    <string name="title_activity_login">Plain - Log in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">La tua Email</string>
+    <string name="id_studente">Il tuo ID studente</string>
+    <string name="prompt_password">La tua Password (almeno 5 caratteri)</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">Indirizzo email non valido</string>
+    <string name="error_invalid_password">La password è troppo corta</string>
+    <string name="error_incorrect_password">La password non è corretta</string>
+    <string name="error_field_required">Questo campo è richiesto</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="my_text">Se non sei ancora registrato o non ricordi la password, chiedi al tuo docente</string>
+    <string name="stay_connected">Resta connesso</string>
+    <string name="forget_password">Password dimenticata?</string>
+    <string name="accedi_title">Accedi</string>
+    <string name="registrati_title">Registrati</string>
+    <string name="prompt_email_again">Inserisci nuovamente la tua Email</string>
+    <string name="prompt_name">Inserisci il tuo nome</string>
+    <string name="prompt_surname">Inserisci il tuo cognome</string>
+    <string name="action_register">Registrati</string>
+    <string-array name="menu_principale">
+        <item>I miei inviti</item>
+        <item>Modifica account</item>
+        <item>Logout</item>
+    </string-array>
+    <string name="account_title">Il mio Account</string>
+    <string name="inviti_title">I miei Inviti</string>
+    <string name="crea_gruppo_title">Crea un Gruppo</string>
 </resources>
